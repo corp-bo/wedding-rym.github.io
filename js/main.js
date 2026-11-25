@@ -81,6 +81,25 @@
     var s = document.createElement("span"); s.style.background = col; $("vest-colores").append(s);
   });
 
+  /* ---------- Regalos ---------- */
+  (function () {
+    var R = C.regalos, sec = $("sec-regalos");
+    if (!R) { sec.style.display = "none"; return; }
+    set("regalos-titulo", R.titulo); set("regalos-texto", R.texto);
+    set("regalos-banco", R.banco); set("regalos-cuenta", R.cuenta); set("regalos-copiar", R.textoCopiar);
+    var qr = $("regalos-qr"); if (R.qr) qr.src = R.qr; else qr.style.display = "none";
+    $("regalos-copiar").addEventListener("click", function () {
+      var b = this;
+      var ok = function () { b.textContent = R.textoCopiado; setTimeout(function () { b.textContent = R.textoCopiar; }, 2000); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(R.cuenta).then(ok);
+      else {                                           // respaldo para cuando se abre el archivo directo
+        var t = document.createElement("textarea"); t.value = R.cuenta; document.body.append(t); t.select();
+        try { document.execCommand("copy"); ok(); } catch (e) {}
+        t.remove();
+      }
+    });
+  })();
+  
   /* ---------- Calendario del mes (semana desde el lunes) ---------- */
   (function () {
     var primero = (new Date(F.anio, F.mes - 1, 1).getDay() + 6) % 7;
