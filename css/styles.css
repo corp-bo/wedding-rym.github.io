@@ -229,6 +229,13 @@ button { font: inherit; cursor: pointer; }
 .vest__imgs img { width: 100%; aspect-ratio: .8; object-fit: cover; border-radius: .7rem; box-shadow: 0 8px 18px var(--color-sombra); }
 .vest__imgs figcaption { margin-top: .4rem; font-size: .78rem; color: var(--color-gris); }
 
+/* ----- Regalos ----- */
+.regalos__texto { max-width: 21rem; margin-top: .8rem; padding-inline: 1rem; font-size: var(--tam-texto); line-height: 1.6; color: var(--color-gris); }
+.regalos__qr { width: min(56vw, 210px); margin-top: 1.2rem; padding: .6rem; background: var(--color-chip-fondo); border-radius: .6rem; box-shadow: 0 8px 18px var(--color-sombra); }
+.regalos__banco { margin-top: 1.2rem; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--color-primario); }
+.regalos__cuenta { margin-top: .2rem; font-family: var(--fuente-nombres); font-size: 1.5rem; letter-spacing: .06em; color: var(--color-primario); }
+.enlace--btn { margin: .6rem 0 0; padding: 0; border: 0; background: none; font-family: inherit; }
+
 /* ----- Libro de visitas ----- */
 .libro { width: min(82%, 390px); margin-top: 1.3rem; display: flex; flex-direction: column; gap: .7rem; }
 .libro input, .libro textarea {
