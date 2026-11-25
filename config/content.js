@@ -88,6 +88,17 @@ window.INVITACION = {
     imagenes: []                                    // opcional, ej.: [{ src: "assets/img/traje.jpg", etiqueta: "Caballeros" }, { src: "assets/img/vestido.jpg", etiqueta: "Damas" }]
   },
 
+  /* ---------- Regalos (quita todo este bloque para ocultar la sección) ---------- */
+  regalos: {
+    titulo: "Sugerencia de regalo",
+    texto: "Si deseas hacernos un obsequio, agradeceremos de corazón una contribución para nuestra luna de miel y comenzar esta nueva etapa.",
+    qr: "assets/img/qr.png",                        // imagen del QR ("" = sin QR)
+    banco: "Cuenta bancaria BNB",
+    cuenta: "150-3434357",
+    textoCopiar: "Copiar número",
+    textoCopiado: "¡Copiado!"
+  },
+   
   /* ---------- Libro de visitas ---------- */
   libro: {
     titulo: "Libro de visitas",
